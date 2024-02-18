@@ -2,8 +2,8 @@
 This Action will Build your React Project and deploy it to Github Pages
 
 ## Getting Started 🎉
-1.
-In ``package.json`` add or edit ``"homepage": "https://**YourGithubName**.github.io/**YourRepoName**"``
+1. In ``package.json`` add or edit ``"homepage": "https://**YourGithubName**.github.io/**YourRepoName**"``
+
 
 2. Create a Github Actions Workflow file and add this to it (and replace "YourGithubName" and "YourRepoName" with the names)
 ```yml
@@ -22,6 +22,7 @@ jobs:
         reponame: 'YourRepoName'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
 ```
+
 3. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
 
 ## Options 🔧
@@ -36,7 +37,8 @@ jobs:
 |   cname  |           Custom domain          |        -       |     ❌    |
 |  useyarn |         Use yarn to build        |      false     |     ❌    |
 
-# Optional Custom Domain | cname
+
+## Optional Custom Domain | cname
 When you use CNAME change in ``package.json`` your Homepage and add to your yml behind token
 ```yml
 cname: 'yourcustomDomain.tdl'
