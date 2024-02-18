@@ -2,13 +2,14 @@
 This Action will Build your React Project and deploy it to Github Pages
 
 ## Getting Started 🎉
-1. In ``package.json`` add or edit ``"homepage": "https://**YourGithubName**.github.io/**YourRepoName**"``
-
+1. In ``package.json`` add or edit ``"homepage": "https://**YourGithubName**.github.io/**YourRepoName**"``  
 
 2. Create a Github Actions Workflow file and add this to it (and replace "YourGithubName" and "YourRepoName" with the names)
 ```yml
 name: Build React App
 on: [push]
+permissions:
+  contents: write # Permission for Action
 jobs:
   build_react:
     runs-on: ubuntu-latest
@@ -23,21 +24,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
 ```
 
-3. Don't forget give Github Actions the rights to read and write  
-   Go to Settings -> Actions -> general -> Workflow Permissions
-   ![Actions Permission](https://cdn.filehost.icbit.win/ZoGo0/JUWABAXI69.jpg)  
-  Or Add:
-```yml
-name: Build React App
-on: [push]
-
-permissions:
-  contents: write
-
-jobs: ....
-```
-before jobs
-5. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
+3. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
 
 ## Options 🔧
 |   Name   |            Description           |     Default    | Required |
@@ -63,6 +50,8 @@ Full example with custom domain
 ```yml
 name: Build React App
 on: [push]
+permissions:
+  contents: write
 jobs:
   build_react:
     runs-on: ubuntu-latest
