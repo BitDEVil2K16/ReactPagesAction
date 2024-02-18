@@ -40,7 +40,7 @@ jobs:
 
 
 ## Optional Custom Domain | cname
-When you use CNAME change in ``package.json`` your Homepage and append cname in your yml.  
+Change in ``package.json`` your Homepage and append cname in your yml.  
 After token:
 ```yml
 cname: 'yourcustomDomain.tdl'
