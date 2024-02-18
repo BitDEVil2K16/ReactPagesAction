@@ -39,7 +39,27 @@ jobs:
 
 
 ## Optional Custom Domain | cname
-When you use CNAME change in ``package.json`` your Homepage and add to your yml behind token
+When you use CNAME change in ``package.json`` your Homepage and append add option cname in your yml.  
+After token:
 ```yml
 cname: 'yourcustomDomain.tdl'
+```  
+
+Full example with custom domain
+```yml
+name: Build React App
+on: [push]
+jobs:
+  build_react:
+    runs-on: ubuntu-latest
+    name: Build React
+    steps:
+    - uses: actions/checkout@v2
+    - id: Build-React-App
+      uses: BitDEVil2K16/ReactPagesAction@1.0.0
+      with:
+        username: 'YourGithubName'
+        reponame: 'YourRepoName'
+        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+        cname: 'example.com'
 ```
