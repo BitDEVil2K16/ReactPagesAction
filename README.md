@@ -23,7 +23,11 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
 ```
 
-3. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
+3. Don't forget give Github Actions the rights to read and write
+   Go to Settings -> Actions -> general -> Workflow Permissions
+   ![Actions Permission](https://cdn.filehost.icbit.win/ZoGo0/JUWABAXI69.jpg)
+
+4. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
 
 ## Options 🔧
 |   Name   |            Description           |     Default    | Required |
