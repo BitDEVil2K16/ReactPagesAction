@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - id: Build-React-App
-      uses: BitDEVil2K16/ReactPagesAction@1.0.0
+      uses: BitDEVil2K16/ReactPagesAction@1.0.1
       with:
         username: 'YourGithubName'
         reponame: 'YourRepoName'
@@ -60,7 +60,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - id: Build-React-App
-      uses: BitDEVil2K16/ReactPagesAction@1.0.0
+      uses: BitDEVil2K16/ReactPagesAction@1.0.1
       with:
         username: 'YourGithubName'
         reponame: 'YourRepoName'
