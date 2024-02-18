@@ -25,9 +25,19 @@ jobs:
 
 3. Don't forget give Github Actions the rights to read and write  
    Go to Settings -> Actions -> general -> Workflow Permissions
-   ![Actions Permission](https://cdn.filehost.icbit.win/ZoGo0/JUWABAXI69.jpg)
+   ![Actions Permission](https://cdn.filehost.icbit.win/ZoGo0/JUWABAXI69.jpg)  
+  Or Add:
+```yml
+name: Build React App
+on: [push]
 
-4. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
+permissions:
+  contents: write
+
+jobs: ....
+```
+before jobs
+5. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
 
 ## Options 🔧
 |   Name   |            Description           |     Default    | Required |
