@@ -2,9 +2,9 @@
 This Action will Build your React Project and deploy it to Github Pages
 
 ## Getting Started 🎉
-1. In ``package.json`` add or edit ``"homepage": "https://**YourGithubName**.github.io/**YourRepoName**"``  
+### 1. In ``package.json`` add or edit ``"homepage": "https://**YourGithubName**.github.io/**YourRepoName**"``  
 
-2. Create a Github Actions Workflow file and add this to it (and replace "YourGithubName" and "YourRepoName" with the names)
+### 2. Create a Github Actions Workflow file and add this to it (and replace "YourGithubName" and "YourRepoName" with the names)
 ```yml
 name: Build React App
 on: [push]
@@ -24,7 +24,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
 ```
 
-3. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
+### 3. Go to Settings -> Scroll down to GitHub Pages -> Select `gh-pages` as branch and `/` as directory 
 
 ## Options 🔧
 |   Name   |            Description           |     Default    | Required |
@@ -37,6 +37,7 @@ jobs:
 |  gitmsg  |        Git commit message        |     deploy     |     ❌    |
 |   cname  |           Custom domain          |        -       |     ❌    |
 |  useyarn |         Use yarn to build        |      false     |     ❌    |
+
 
 
 ## Optional Custom Domain | cname
@@ -65,4 +66,7 @@ jobs:
         reponame: 'YourRepoName'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
         cname: 'example.com'
-```
+```  
+
+## License
+The scripts and documentation in this project are released under the [MIT License](https://github.com/BitDEVil2K16/ReactPagesAction/blob/master/LICENSE).
