@@ -7,7 +7,13 @@ This Action will Build your React Project and deploy it to Github Pages
 ### 2. Create a Github Actions Workflow file and add this to it (and replace "YourGithubName" and "YourRepoName" with the names)
 ```yml
 name: Build React App
-on: [push]
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
 permissions:
   contents: write # Permission for Action
 jobs:
@@ -50,7 +56,13 @@ cname: 'yourcustomDomain.tdl'
 Full example with custom domain
 ```yml
 name: Build React App
-on: [push]
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
 permissions:
   contents: write
 jobs:
